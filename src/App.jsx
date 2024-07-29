@@ -5,6 +5,7 @@ import Projects from "./components/Projects"
 import Technologies from "./components/Technologies"
 import Contact from "./components/Contact"
 import "./constants/scrollbar.css";
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
   return(
