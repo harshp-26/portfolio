@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-
+import { motion } from "framer-motion";
 const Popup = ({ project, onClose }) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';    
@@ -24,7 +24,12 @@ const Popup = ({ project, onClose }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 backdrop-blur-sm">
-      <div className="relative bg-slate-900 p-4 rounded-lg shadow-lg w-full max-w-md max-h-[90vh] m-3 flex flex-col">
+      <motion.div
+      initial={{ opacity: 0, scale: 0.85 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.85}}
+      transition={{ duration: 0.4 }}
+      className="relative bg-slate-900 p-4 rounded-lg shadow-lg w-full max-w-md max-h-[90vh] m-3 flex flex-col">
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-white p-2 font-semibold z-10"
@@ -43,7 +48,7 @@ const Popup = ({ project, onClose }) => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

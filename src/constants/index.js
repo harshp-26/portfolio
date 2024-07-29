@@ -63,7 +63,7 @@ export const PROJECTS = [
     image: Smart1,
     title: "IoT Smart Home Application",
     description: `Developed a smart home system integrating Python, C++, and Arduino for device control, using Raspberry Pi for processing and Google Firebase for database and authentication.`,
-    technologies: ["Python", "C++", "Android", "Arduino", "Raspberry Pi", "Google Firebase"],
+    technologies: ["Python", "C++", "Android", "Arduino", "Raspberry Pi", "Google Cloud Platform"],
     images: [Smart1,Smart2,Smart3,Smart4]
   },
   {
